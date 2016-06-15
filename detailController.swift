@@ -9,14 +9,17 @@ class detailController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
+	
+	override func viewWillAppear(animated: Bool) {
+		print("詳細画面表示")
+	}
 
 	
 	
 	
 
+	
 	
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()

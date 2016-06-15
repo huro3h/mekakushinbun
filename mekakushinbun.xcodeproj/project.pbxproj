@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3C018FB21D112C1100020AE9 /* detailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C018FB11D112C1100020AE9 /* detailController.swift */; };
 		3C018FB41D112C2900020AE9 /* menuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C018FB31D112C2900020AE9 /* menuController.swift */; };
+		3C018FB61D1132CA00020AE9 /* newsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C018FB51D1132CA00020AE9 /* newsCell.xib */; };
+		3C018FB81D1136D500020AE9 /* newsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C018FB71D1136D500020AE9 /* newsTableViewCell.swift */; };
 		3CF67D411D112409004050EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF67D401D112409004050EE /* AppDelegate.swift */; };
 		3CF67D431D112409004050EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF67D421D112409004050EE /* ViewController.swift */; };
 		3CF67D461D112409004050EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF67D441D112409004050EE /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		3C018FB11D112C1100020AE9 /* detailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = detailController.swift; path = ../detailController.swift; sourceTree = "<group>"; };
 		3C018FB31D112C2900020AE9 /* menuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuController.swift; sourceTree = "<group>"; };
+		3C018FB51D1132CA00020AE9 /* newsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsCell.xib; sourceTree = "<group>"; };
+		3C018FB71D1136D500020AE9 /* newsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableViewCell.swift; sourceTree = "<group>"; };
 		3CF67D3D1D112409004050EE /* mekakushinbun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mekakushinbun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF67D401D112409004050EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF67D421D112409004050EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,13 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				3CF67D401D112409004050EE /* AppDelegate.swift */,
-				3CF67D421D112409004050EE /* ViewController.swift */,
 				3C018FB11D112C1100020AE9 /* detailController.swift */,
 				3C018FB31D112C2900020AE9 /* menuController.swift */,
 				3CF67D441D112409004050EE /* Main.storyboard */,
 				3CF67D471D112409004050EE /* Assets.xcassets */,
+				3CF67D421D112409004050EE /* ViewController.swift */,
 				3CF67D491D112409004050EE /* LaunchScreen.storyboard */,
 				3CF67D4C1D112409004050EE /* Info.plist */,
+				3C018FB51D1132CA00020AE9 /* newsCell.xib */,
+				3C018FB71D1136D500020AE9 /* newsTableViewCell.swift */,
 			);
 			path = mekakushinbun;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 			files = (
 				3CF67D4B1D112409004050EE /* LaunchScreen.storyboard in Resources */,
 				3CF67D481D112409004050EE /* Assets.xcassets in Resources */,
+				3C018FB61D1132CA00020AE9 /* newsCell.xib in Resources */,
 				3CF67D461D112409004050EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +271,7 @@
 			files = (
 				3C018FB41D112C2900020AE9 /* menuController.swift in Sources */,
 				3CF67D431D112409004050EE /* ViewController.swift in Sources */,
+				3C018FB81D1136D500020AE9 /* newsTableViewCell.swift in Sources */,
 				3CF67D411D112409004050EE /* AppDelegate.swift in Sources */,
 				3C018FB21D112C1100020AE9 /* detailController.swift in Sources */,
 			);

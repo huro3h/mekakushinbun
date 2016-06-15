@@ -10,7 +10,10 @@ class menuController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+	
+	override func viewWillAppear(animated: Bool) {
+		print("menu画面表示")
+	}
 	
 	
 	
