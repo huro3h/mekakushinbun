@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C018FB21D112C1100020AE9 /* detailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C018FB11D112C1100020AE9 /* detailController.swift */; };
+		3C018FB41D112C2900020AE9 /* menuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C018FB31D112C2900020AE9 /* menuController.swift */; };
 		3CF67D411D112409004050EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF67D401D112409004050EE /* AppDelegate.swift */; };
 		3CF67D431D112409004050EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF67D421D112409004050EE /* ViewController.swift */; };
 		3CF67D461D112409004050EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF67D441D112409004050EE /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C018FB11D112C1100020AE9 /* detailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = detailController.swift; path = ../detailController.swift; sourceTree = "<group>"; };
+		3C018FB31D112C2900020AE9 /* menuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuController.swift; sourceTree = "<group>"; };
 		3CF67D3D1D112409004050EE /* mekakushinbun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mekakushinbun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF67D401D112409004050EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF67D421D112409004050EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				3CF67D401D112409004050EE /* AppDelegate.swift */,
 				3CF67D421D112409004050EE /* ViewController.swift */,
+				3C018FB11D112C1100020AE9 /* detailController.swift */,
+				3C018FB31D112C2900020AE9 /* menuController.swift */,
 				3CF67D441D112409004050EE /* Main.storyboard */,
 				3CF67D471D112409004050EE /* Assets.xcassets */,
 				3CF67D491D112409004050EE /* LaunchScreen.storyboard */,
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C018FB41D112C2900020AE9 /* menuController.swift in Sources */,
 				3CF67D431D112409004050EE /* ViewController.swift in Sources */,
 				3CF67D411D112409004050EE /* AppDelegate.swift in Sources */,
+				3C018FB21D112C1100020AE9 /* detailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +490,7 @@
 				3CF67D671D112409004050EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CF67D681D112409004050EE /* Build configuration list for PBXNativeTarget "mekakushinbunTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +499,7 @@
 				3CF67D6A1D112409004050EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CF67D6B1D112409004050EE /* Build configuration list for PBXNativeTarget "mekakushinbunUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +508,7 @@
 				3CF67D6D1D112409004050EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
