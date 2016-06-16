@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28BA83951B6F905CEAF91101 /* libPods-mekakushinbunTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8692572AA1B7C7851D79E4E7 /* libPods-mekakushinbunTests.a */; };
 		3C018FB21D112C1100020AE9 /* detailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C018FB11D112C1100020AE9 /* detailController.swift */; };
 		3C018FB41D112C2900020AE9 /* menuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C018FB31D112C2900020AE9 /* menuController.swift */; };
 		3C018FB61D1132CA00020AE9 /* newsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C018FB51D1132CA00020AE9 /* newsCell.xib */; };
@@ -18,6 +19,8 @@
 		3CF67D4B1D112409004050EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF67D491D112409004050EE /* LaunchScreen.storyboard */; };
 		3CF67D561D112409004050EE /* mekakushinbunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF67D551D112409004050EE /* mekakushinbunTests.swift */; };
 		3CF67D611D112409004050EE /* mekakushinbunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF67D601D112409004050EE /* mekakushinbunUITests.swift */; };
+		8865678C9CFB9C538B77AB9F /* Pods_mekakushinbun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0D4B234CDF8F5953467F32 /* Pods_mekakushinbun.framework */; };
+		D5A601155FB599FCE8B667C6 /* libPods-mekakushinbunUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA9EE587CF948A90224D0C4 /* libPods-mekakushinbunUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AE6CE006D67CF6CFA2E1417 /* Pods-mekakushinbunUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mekakushinbunUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mekakushinbunUITests/Pods-mekakushinbunUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1AE8584F9F73A40FBC85D6FC /* Pods-mekakushinbunTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mekakushinbunTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mekakushinbunTests/Pods-mekakushinbunTests.debug.xcconfig"; sourceTree = "<group>"; };
+		32EC651C4519A8EB504D50EF /* Pods-mekakushinbun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mekakushinbun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mekakushinbun/Pods-mekakushinbun.debug.xcconfig"; sourceTree = "<group>"; };
 		3C018FB11D112C1100020AE9 /* detailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = detailController.swift; path = ../detailController.swift; sourceTree = "<group>"; };
 		3C018FB31D112C2900020AE9 /* menuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuController.swift; sourceTree = "<group>"; };
 		3C018FB51D1132CA00020AE9 /* newsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsCell.xib; sourceTree = "<group>"; };
@@ -55,6 +61,12 @@
 		3CF67D5C1D112409004050EE /* mekakushinbunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mekakushinbunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF67D601D112409004050EE /* mekakushinbunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mekakushinbunUITests.swift; sourceTree = "<group>"; };
 		3CF67D621D112409004050EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F60E092529A759E761F6871 /* Pods-mekakushinbun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mekakushinbun.release.xcconfig"; path = "Pods/Target Support Files/Pods-mekakushinbun/Pods-mekakushinbun.release.xcconfig"; sourceTree = "<group>"; };
+		8692572AA1B7C7851D79E4E7 /* libPods-mekakushinbunTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mekakushinbunTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA9EE587CF948A90224D0C4 /* libPods-mekakushinbunUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mekakushinbunUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F39520A7D4AC539A80EE3F5 /* Pods-mekakushinbunUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mekakushinbunUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mekakushinbunUITests/Pods-mekakushinbunUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CAAB4376297757F21106A3FF /* Pods-mekakushinbunTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mekakushinbunTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mekakushinbunTests/Pods-mekakushinbunTests.release.xcconfig"; sourceTree = "<group>"; };
+		EE0D4B234CDF8F5953467F32 /* Pods_mekakushinbun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mekakushinbun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8865678C9CFB9C538B77AB9F /* Pods_mekakushinbun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BA83951B6F905CEAF91101 /* libPods-mekakushinbunTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5A601155FB599FCE8B667C6 /* libPods-mekakushinbunUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +104,8 @@
 				3CF67D541D112409004050EE /* mekakushinbunTests */,
 				3CF67D5F1D112409004050EE /* mekakushinbunUITests */,
 				3CF67D3E1D112409004050EE /* Products */,
+				4480F2D9316C15028A7B2615 /* Pods */,
+				4A82FA073222EFA11F008518 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,11 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				3CF67D401D112409004050EE /* AppDelegate.swift */,
+				3CF67D421D112409004050EE /* ViewController.swift */,
 				3C018FB11D112C1100020AE9 /* detailController.swift */,
 				3C018FB31D112C2900020AE9 /* menuController.swift */,
 				3CF67D441D112409004050EE /* Main.storyboard */,
 				3CF67D471D112409004050EE /* Assets.xcassets */,
-				3CF67D421D112409004050EE /* ViewController.swift */,
 				3CF67D491D112409004050EE /* LaunchScreen.storyboard */,
 				3CF67D4C1D112409004050EE /* Info.plist */,
 				3C018FB51D1132CA00020AE9 /* newsCell.xib */,
@@ -137,6 +154,29 @@
 			path = mekakushinbunUITests;
 			sourceTree = "<group>";
 		};
+		4480F2D9316C15028A7B2615 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32EC651C4519A8EB504D50EF /* Pods-mekakushinbun.debug.xcconfig */,
+				7F60E092529A759E761F6871 /* Pods-mekakushinbun.release.xcconfig */,
+				1AE8584F9F73A40FBC85D6FC /* Pods-mekakushinbunTests.debug.xcconfig */,
+				CAAB4376297757F21106A3FF /* Pods-mekakushinbunTests.release.xcconfig */,
+				1AE6CE006D67CF6CFA2E1417 /* Pods-mekakushinbunUITests.debug.xcconfig */,
+				8F39520A7D4AC539A80EE3F5 /* Pods-mekakushinbunUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4A82FA073222EFA11F008518 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE0D4B234CDF8F5953467F32 /* Pods_mekakushinbun.framework */,
+				8692572AA1B7C7851D79E4E7 /* libPods-mekakushinbunTests.a */,
+				8CA9EE587CF948A90224D0C4 /* libPods-mekakushinbunUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CF67D651D112409004050EE /* Build configuration list for PBXNativeTarget "mekakushinbun" */;
 			buildPhases = (
+				AD0353B16D878D42CA4F6E1D /* 📦 Check Pods Manifest.lock */,
 				3CF67D391D112409004050EE /* Sources */,
 				3CF67D3A1D112409004050EE /* Frameworks */,
 				3CF67D3B1D112409004050EE /* Resources */,
+				CD4DF595B640BE74C740E534 /* 📦 Embed Pods Frameworks */,
+				F52D44E5196B52D4EF4065E5 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CF67D681D112409004050EE /* Build configuration list for PBXNativeTarget "mekakushinbunTests" */;
 			buildPhases = (
+				980882B1A2DE1E2F3555E911 /* 📦 Check Pods Manifest.lock */,
 				3CF67D4D1D112409004050EE /* Sources */,
 				3CF67D4E1D112409004050EE /* Frameworks */,
 				3CF67D4F1D112409004050EE /* Resources */,
+				6B3A37B18CB36361288E1E8A /* 📦 Embed Pods Frameworks */,
+				C6E324D680CD3B210DC88E99 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CF67D6B1D112409004050EE /* Build configuration list for PBXNativeTarget "mekakushinbunUITests" */;
 			buildPhases = (
+				BC63F1F00D23434D25D9407F /* 📦 Check Pods Manifest.lock */,
 				3CF67D581D112409004050EE /* Sources */,
 				3CF67D591D112409004050EE /* Frameworks */,
 				3CF67D5A1D112409004050EE /* Resources */,
+				246A3B08DF3D4880FF4B5CC0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,6 +311,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		246A3B08DF3D4880FF4B5CC0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mekakushinbunUITests/Pods-mekakushinbunUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B3A37B18CB36361288E1E8A /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mekakushinbunTests/Pods-mekakushinbunTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		980882B1A2DE1E2F3555E911 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD0353B16D878D42CA4F6E1D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC63F1F00D23434D25D9407F /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6E324D680CD3B210DC88E99 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mekakushinbunTests/Pods-mekakushinbunTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD4DF595B640BE74C740E534 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mekakushinbun/Pods-mekakushinbun-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F52D44E5196B52D4EF4065E5 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mekakushinbun/Pods-mekakushinbun-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CF67D391D112409004050EE /* Sources */ = {
@@ -411,6 +582,7 @@
 		};
 		3CF67D661D112409004050EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32EC651C4519A8EB504D50EF /* Pods-mekakushinbun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mekakushinbun/Info.plist;
@@ -422,6 +594,7 @@
 		};
 		3CF67D671D112409004050EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F60E092529A759E761F6871 /* Pods-mekakushinbun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mekakushinbun/Info.plist;
@@ -433,6 +606,7 @@
 		};
 		3CF67D691D112409004050EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE8584F9F73A40FBC85D6FC /* Pods-mekakushinbunTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = mekakushinbunTests/Info.plist;
@@ -445,6 +619,7 @@
 		};
 		3CF67D6A1D112409004050EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAAB4376297757F21106A3FF /* Pods-mekakushinbunTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = mekakushinbunTests/Info.plist;
@@ -457,6 +632,7 @@
 		};
 		3CF67D6C1D112409004050EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE6CE006D67CF6CFA2E1417 /* Pods-mekakushinbunUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = mekakushinbunUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -469,6 +645,7 @@
 		};
 		3CF67D6D1D112409004050EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F39520A7D4AC539A80EE3F5 /* Pods-mekakushinbunUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = mekakushinbunUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

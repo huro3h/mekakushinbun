@@ -7,7 +7,12 @@ import UIKit
 
 class newsTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	@IBOutlet weak var subjectLabel: UILabel!
+	@IBOutlet weak var detailLabel: UILabel!
+	@IBOutlet weak var dateTimeLabel: UILabel!
+	@IBOutlet weak var sourceLabel: UILabel!
+	
+	override func awakeFromNib() {
         super.awakeFromNib()
     }
 
