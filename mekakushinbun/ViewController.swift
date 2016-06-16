@@ -4,9 +4,10 @@
 //  Copyright © 2016年 satoshiii. All rights reserved.
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController, UITableViewDataSource,
-UITableViewDelegate {
+UITableViewDelegate, UIScrollViewDelegate {
 
 	@IBOutlet weak var listTableView: UITableView!
 	
@@ -14,6 +15,14 @@ UITableViewDelegate {
 		super.viewDidLoad()
 		// 別でcellファイルを作った時に
 		listTableView.registerNib(UINib(nibName: "newsCell", bundle: nil), forCellReuseIdentifier: "newsCell")
+		
+		Alamofire.request(.GET, "http://news.yahoo.co.jp/pickup/rss.xml", parameters: nil)
+			.response { (request, response, data, error) in
+				print ("requestの中身\(request)")
+				print("responseの中身\(response)")
+				print("dataの中身\(data)")
+				print("errorの中身\(error)")
+		}
 	}
 	
 	override func viewWillAppear(animated: Bool) {
@@ -47,7 +56,7 @@ UITableViewDelegate {
 	
 	
 	// 自作関数置き場
-		// NSDate->String型に変換
+	// NSDate->String型に変換
 	func dateString(date: NSDate) -> String {
 		let dateFormatter = NSDateFormatter()
 		dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
@@ -56,7 +65,6 @@ UITableViewDelegate {
 		let dateString: String = dateFormatter.stringFromDate(date)
 		return dateString
 	}
-
 	
 	
 //	override func didReceiveMemoryWarning() {
