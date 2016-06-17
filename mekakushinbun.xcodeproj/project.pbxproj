@@ -48,6 +48,7 @@
 		3C018FB31D112C2900020AE9 /* menuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuController.swift; sourceTree = "<group>"; };
 		3C018FB51D1132CA00020AE9 /* newsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = newsCell.xib; sourceTree = "<group>"; };
 		3C018FB71D1136D500020AE9 /* newsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newsTableViewCell.swift; sourceTree = "<group>"; };
+		3C55AFC31D13BDC800AF3358 /* mekakushinbun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mekakushinbun-Bridging-Header.h"; sourceTree = "<group>"; };
 		3CF67D3D1D112409004050EE /* mekakushinbun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mekakushinbun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF67D401D112409004050EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF67D421D112409004050EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 				3CF67D4C1D112409004050EE /* Info.plist */,
 				3C018FB51D1132CA00020AE9 /* newsCell.xib */,
 				3C018FB71D1136D500020AE9 /* newsTableViewCell.swift */,
+				3C55AFC31D13BDC800AF3358 /* mekakushinbun-Bridging-Header.h */,
 			);
 			path = mekakushinbun;
 			sourceTree = "<group>";
@@ -585,10 +587,13 @@
 			baseConfigurationReference = 32EC651C4519A8EB504D50EF /* Pods-mekakushinbun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = mekakushinbun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.satoshiii.mekakushinbun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mekakushinbun/mekakushinbun-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -597,10 +602,12 @@
 			baseConfigurationReference = 7F60E092529A759E761F6871 /* Pods-mekakushinbun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = mekakushinbun/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.satoshiii.mekakushinbun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "mekakushinbun/mekakushinbun-Bridging-Header.h";
 			};
 			name = Release;
 		};

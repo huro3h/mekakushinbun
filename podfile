@@ -3,9 +3,10 @@
 
 target 'mekakushinbun' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
-  	pod 'Alamofire','~> 3.2.0'
+	pod 'Alamofire','~> 3.2.0'
 	pod 'SVProgressHUD'
 	pod 'PullToRefreshSwift'
+	pod 'SwiftyJSON','~> 2.3.0'
 	use_frameworks!
 	end
 

@@ -2,17 +2,20 @@ PODS:
   - Alamofire (3.2.1)
   - PullToRefreshSwift (2.0.0)
   - SVProgressHUD (2.0.3)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.2.0)
   - PullToRefreshSwift
   - SVProgressHUD
+  - SwiftyJSON (~> 2.3.0)
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   PullToRefreshSwift: 5c509e89c6638eae689813b665eff1a0ea0560d3
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: d3955bbd6ac18d654a254bee0bea1819147a48a3
+PODFILE CHECKSUM: 62f746d6eb620772ebbe96d0aaea07b6a46d78d7
 
 COCOAPODS: 1.0.0
