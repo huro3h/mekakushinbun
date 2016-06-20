@@ -11,42 +11,38 @@ class ViewController: UIViewController, UITableViewDataSource,
 UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 
 	@IBOutlet weak var listTableView: UITableView!
+
+	var articles: [[String: String?]] = [] // 記事を入れるプロパティを定義
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// 別でcellファイルを作った時に
 		listTableView.registerNib(UINib(nibName: "newsCell", bundle: nil), forCellReuseIdentifier: "newsCell")
 		
-		Alamofire.request(.GET, "http://news.yahoo.co.jp/pickup/rss.xml", parameters: nil)
-			.response { (request, response, data, error) in
-				print ("requestの中身\(request)")
-				print ("responseの中身\(response)")
-				print ("dataの中身\(data)")
-				print ("errorの中身\(error)")
-		}
+		getArticles()
 		
-		// XML解析実行
-		//self.loadxml()
 	}
-	
+
 	override func viewWillAppear(animated: Bool) {
 		print("news一覧画面表示")
-		listTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+		
+//		listTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 10 // 行数をデータの数でカウント
+		return articles.count // 行数をデータの数でカウント
 	}
 	
 	// 2.行に表示する内容をリセット
 	// returnで入る物、int型(引数) -> 戻り値のデータ型
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("newsCell")! as! newsTableViewCell
-		
-		cell.subjectLabel.text = "題名\([indexPath.row])"
-		cell.detailLabel.text = "詳細\([indexPath.row])"
-		cell.dateTimeLabel.text = "日時\([indexPath.row])"
-		cell.sourceLabel.text = "記事元\([indexPath.row])"
+		let article = articles[indexPath.row] // 行数番目の記事を取得
+//		print("なにがはいってるか表示\(article)")
+		cell.subjectLabel?.text = article["title"]!
+		cell.dateTimeLabel.text = article["publishedDate"]!
+//		cell.detailLabel.text = "詳細\([indexPath.row])"
+//		cell.sourceLabel.text = "記事元\([indexPath.row])"
 		return cell
 	}
 	
@@ -60,58 +56,42 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 	func dateString(date: NSDate) -> String {
 		let dateFormatter = NSDateFormatter()
 		dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
-		// dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
-		dateFormatter.dateFormat = "M/d"
+		dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+		// dateFormatter.dateFormat = "M/d"
 		let dateString: String = dateFormatter.stringFromDate(date)
 		return dateString
 	}
 	
-	// XMLを解析する
-//	func loadxml(){
-//		let url_text = "http://news.yahoo.co.jp/pickup/rss.xml"
-//		
-//		guard let url = NSURL(string: url_text) else{
-//			return
-//		}
-//		
-//		// インターネット上のXMLを取得し、NSXMLParserに読み込む
-//		guard let parser = NSXMLParser(contentsOfURL: url) else{
-//			return
-//		}
-//		parser.delegate = self;
-//		parser.parse()
-//	}
+	func getArticles() {
+		Alamofire.request(.GET, "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/rss.xml&num=8") // APIへリクエストを送信
+			.responseJSON { response in
+				// ここに処理を記述していく
+				guard let object = response.result.value else {
+					return
+				//print(response.result.value)
+				}
+					let json = JSON(object)
+					json.forEach { (_, json) in
+						let article: [String: String?] = [
+						"title": json["title"].string,
+						"publishedDate" :json["publishedDate"].string
+						]
+						self.articles.append(article)
+						//print(json["title"].string)
+					}
+				print(self.articles)
+				// 非同期通信の為、上のほうで１回目カウントした際は空振りしている
+				// それ故、読み直しさせることで正常に表示させる
+				self.listTableView.reloadData()
+			}
+	}
 	
-//	// XML解析開始時に実行されるメソッド
-//	func parserDidStartDocument(parser: NSXMLParser) {
-//		print("XML解析開始しました")
-//	}
-//	
-//	// 解析中に要素の開始タグがあったときに実行されるメソッド
-//	func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-//		print("開始タグ:" + elementName)
-//	}
-//	
-//	// 開始タグと終了タグでくくられたデータがあったときに実行されるメソッド
-//	func parser(parser: NSXMLParser, foundCharacters string: String) {
-//		print("要素:" + string)
-//	}
-//	
-//	// 解析中に要素の終了タグがあったときに実行されるメソッド
-//	func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-//		print("終了タグ:" + elementName)
-//	}
-//	
-//	// XML解析終了時に実行されるメソッド
-//	func parserDidEndDocument(parser: NSXMLParser) {
-//		print("XML解析終了しました")
-//	}
-//	
-//	// 解析中にエラーが発生した時に実行されるメソッド
-//	func parser(parser: NSXMLParser, parseErrorOccurred parseError: NSError) {
-//		print("エラー:" + parseError.localizedDescription)
-//	}
+	
 
+//http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=[http://news.yahoo.co.jp/pickup/rss.xml]&num=[10]
+//http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=[ここにRSSフィードのURL]&num=[取得する数]
+	
+//http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/rss.xml&num=10
 
 
 //	override func didReceiveMemoryWarning() {
