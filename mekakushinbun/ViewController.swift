@@ -15,14 +15,12 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 	var newsTopicTypes: [String] = ["http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/rss.xml&num=15","http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/world/rss.xml&num=15","http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/economy/rss.xml&num=15","http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/science/rss.xml&num=15"]
 	
 	var articles: [[String: AnyObject?]] = [] // 記事を入れるプロパティを定義
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// 別でcellファイルを作った時に
 		listTableView.registerNib(UINib(nibName: "newsCell", bundle: nil), forCellReuseIdentifier: "newsCell")
 		getArticles()
-		
-
 		
 	}
 
@@ -62,11 +60,11 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 //	}
 	
 	// String->NSDate型に変換
-	func stringDate(date: String) -> NSDate {
+	func stringDate(strdate: String) -> NSDate {
 		let formatter = NSDateFormatter()
 		formatter.locale = NSLocale(localeIdentifier: "US_en")
 		formatter.dateFormat = "E, dd MMM yyyy HH:mm:ss Z"
-		let date = formatter.dateFromString("Thu, 04 Sep 2014 10:50:12 +0000")
+		let date = formatter.dateFromString(strdate)
 		return date!
 	}
 
@@ -88,23 +86,22 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 								json.forEach { (key, jsonArray) in
 									if(key == "entries") {
 										jsonArray.forEach{ (_, json) in
-											
 											// 上で作った関数(stringDate)でNSDate型に変換
-											var articleDate = self.stringDate(json["publishedDate"].string!)
-											
+											let articleDate = self.stringDate(json["publishedDate"].string!)
 											
 											let article: [String: AnyObject?] = [
 												"title": json["title"].string,
-												"publishedDate" : json["publishedDate"].string
+												// "publishedDate" : json["publishedDate"].string
+												"publishedDate" : articleDate,
 											]
 											self.articles.append(article)
+											print(articleDate)
 										}
 									}
 								}
 							}
 						}
 					}
-				
 				// print(self.articles)
 				// 非同期通信の為、上のほうで１回目カウントした際は空振りしている
 				// ので、読み直しさせることで正常に表示させる
