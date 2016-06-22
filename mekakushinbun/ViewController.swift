@@ -39,7 +39,8 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 		let article = articles[indexPath.row] // 行数番目の記事を取得
 
 		cell.subjectLabel?.text = article["title"]! as? String
-		cell.dateTimeLabel?.text = article["publishedDate"]! as? String
+		cell.dateTimeLabel?.text = dateString(article["publishedDate"]! as! NSDate)
+//		cell.dateTimeLabel?.text = article["publishedDate"]! as? String
 		
 		return cell
 	}
@@ -51,14 +52,14 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 	
 	// 自作関数置き場
 	// NSDate->String型に変換
-//	func dateString(date: NSDate) -> String {
-//		let dateFormatter = NSDateFormatter()
-//		dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
-//		dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
-//		// dateFormatter.dateFormat = "M/d"
-//		let dateString: String = dateFormatter.stringFromDate(date)
-//		return dateString
-//	}
+	func dateString(date: NSDate) -> String {
+		let dateFormatter = NSDateFormatter()
+		dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+		dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+		// dateFormatter.dateFormat = "M/d"
+		let dateString: String = dateFormatter.stringFromDate(date)
+		return dateString
+	}
 	
 	// String->NSDate型に変換
 	func stringDate(strdate: String) -> NSDate {
