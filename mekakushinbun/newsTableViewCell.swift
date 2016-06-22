@@ -8,9 +8,9 @@ import UIKit
 class newsTableViewCell: UITableViewCell {
 
 	@IBOutlet weak var subjectLabel: UILabel!
-	@IBOutlet weak var detailLabel: UILabel!
 	@IBOutlet weak var dateTimeLabel: UILabel!
-	@IBOutlet weak var sourceLabel: UILabel!
+	@IBOutlet weak var categoryLabel: UILabel!
+
 	
 	override func awakeFromNib() {
         super.awakeFromNib()

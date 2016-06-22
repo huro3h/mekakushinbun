@@ -38,6 +38,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="listTableView" destination="Cvt-9P-IbQ" id="KY9-O1-dj8"/>
+                        <segue destination="bo6-Nf-Ygl" kind="show" id="vp7-cv-2pw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,7 +65,7 @@
             </objects>
             <point key="canvasLocation" x="990" y="997"/>
         </scene>
-        <!--Detail Controller-->
+        <!--詳細-->
         <scene sceneID="gP5-Rt-FRV">
             <objects>
                 <viewController id="bo6-Nf-Ygl" customClass="detailController" customModule="mekakushinbun" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,8 +76,15 @@
                     <view key="view" contentMode="scaleToFill" id="7re-ba-Ifn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Do-Th-hlJ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="454"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="詳細" id="YPk-JI-RqI"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wyl-Rc-jc4" userLabel="First Responder" sceneMemberID="firstResponder"/>

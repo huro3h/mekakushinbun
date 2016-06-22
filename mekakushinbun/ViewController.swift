@@ -12,7 +12,13 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 
 	@IBOutlet weak var listTableView: UITableView!
 	
-	var newsTopicTypes: [String] = ["http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/rss.xml&num=15","http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/world/rss.xml&num=15","http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/economy/rss.xml&num=15","http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/science/rss.xml&num=15"]
+	var newsTopicTypes: [String] =
+		["http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/rss.xml&num=15",
+		 "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/world/rss.xml&num=15",
+		 "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/economy/rss.xml&num=15",
+		 "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://news.yahoo.co.jp/pickup/science/rss.xml&num=15"]
+	
+	var newsCategoryNames: [String] = ["トップ","国際","経済","サイエンス"]
 	
 	var articles: [[String: AnyObject?]] = [] // 記事を入れるプロパティを定義
 
@@ -21,11 +27,9 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 		// 別でcellファイルを作った時に
 		listTableView.registerNib(UINib(nibName: "newsCell", bundle: nil), forCellReuseIdentifier: "newsCell")
 		getArticles()
-		
 	}
 
 	override func viewWillAppear(animated: Bool) {
-
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,14 +41,11 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("newsCell")! as! newsTableViewCell
 		let article = articles[indexPath.row] // 行数番目の記事を取得
-
 		cell.subjectLabel?.text = article["title"]! as? String
 		cell.dateTimeLabel?.text = dateString(article["publishedDate"]! as! NSDate)
-//		cell.dateTimeLabel?.text = article["publishedDate"]! as? String
-		
+		cell.categoryLabel?.text = article["category"]! as? String
 		return cell
 	}
-	
 	
 	func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 	}
@@ -94,8 +95,9 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 											
 											let article: [String: AnyObject?] = [
 												"title": json["title"].string,
-												// "publishedDate" : json["publishedDate"].string
 												"publishedDate" : articleDate,
+												"link" : json["link"].string,
+												"category" : self.newsCategoryNames[newsCount-1],
 											]
 											self.articles.append(article)
 											
@@ -109,7 +111,7 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 				// ので、読み直しさせることで正常に表示させる
 				self.listTableView.reloadData()
 				
-				if (newsCount == 3){
+				if (newsCount == 4){
 					self.articles = self.articles.sort{($0["publishedDate"] as! NSDate).compare($1["publishedDate"] as! NSDate) == NSComparisonResult.OrderedDescending
 					}
 					print(self.articles)
