@@ -25,6 +25,7 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 	}
 
 	override func viewWillAppear(animated: Bool) {
+
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,13 +72,14 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 	
 	func getArticles() {
 		
+		var newsCount: Int = 1
+		
 		for a in newsTopicTypes {
 			Alamofire.request(.GET, "\(a)") // APIへリクエストを送信
 			.responseJSON { response in
 				// ここに処理を記述していく
 				guard let object = response.result.value else {
 					return
-				
 				}
 					let json = JSON(object)
 					json.forEach { (key, json) in
@@ -95,17 +97,23 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 												"publishedDate" : articleDate,
 											]
 											self.articles.append(article)
-											print(articleDate)
+											
 										}
 									}
 								}
 							}
 						}
 					}
-				// print(self.articles)
 				// 非同期通信の為、上のほうで１回目カウントした際は空振りしている
 				// ので、読み直しさせることで正常に表示させる
 				self.listTableView.reloadData()
+				
+				if (newsCount == 3){
+					self.articles = self.articles.sort{($0["publishedDate"] as! NSDate).compare($1["publishedDate"] as! NSDate) == NSComparisonResult.OrderedDescending
+					}
+					print(self.articles)
+				}
+				newsCount++
 			}
 		}
 	}
