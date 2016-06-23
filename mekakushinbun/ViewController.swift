@@ -6,6 +6,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import Ji
 
 class ViewController: UIViewController, UITableViewDataSource,
 UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
@@ -58,9 +59,16 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 	}
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		let detailVC = segue.destinationViewController as! detailController
-		detailVC.selectedIndex = selectedIndex
-		detailVC.newsUrl = articles[selectedIndex]["link"] as! String
+		
+		if (segue.identifier == "detailSegue") {
+			let detailVC = segue.destinationViewController as! detailController
+			detailVC.selectedIndex = selectedIndex
+			detailVC.newsUrl = articles[selectedIndex]["link"] as! String
+		}else if (segue.identifier == "menuSegue") {
+			
+		}else {
+			// どちらでもない遷移
+		}
 		
 	}
 	

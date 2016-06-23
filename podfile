@@ -7,6 +7,7 @@ target 'mekakushinbun' do
 	pod 'SVProgressHUD'
 	pod 'PullToRefreshSwift'
 	pod 'SwiftyJSON','~> 2.3.0'
+	pod 'Ji', '~> 1.1.1'
 	use_frameworks!
 	end
 

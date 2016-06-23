@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Ji.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-mekakushinbun.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +47,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>091A7F6F764BAF2384D9EBDDF1252372</key>
+		<key>2D867DB35FAD4715199351330A4DE1FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0B0572DFB0DAAC429FBCEC7E316FE089</key>
+		<key>3794620AE8ACDFA6E498FEE82A18CEF3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CEE4FDEE040693F39962FF770FFA239B</key>
+		<key>C46ADE443BF1FFD12E4469059797B230</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4F1DB440B42642636E376448A196E87</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE1CB175688B91B85D839BFA55289C2A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E282EFF5604A16400E5A708E31729472</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FBD7C95FE176CD1DF56DEF9A28B0174E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
