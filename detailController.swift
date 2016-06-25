@@ -23,7 +23,7 @@ class detailController: UIViewController {
     }
 	
 	override func viewWillAppear(animated: Bool) {
-		print("詳細画面表示\(selectedIndex)")
+//		print("詳細画面表示\(selectedIndex)")
 		print(newsUrl)
 		let myURL = NSURL(string: newsUrl)
 		let myURLReq = NSURLRequest(URL: myURL!)
@@ -31,13 +31,23 @@ class detailController: UIViewController {
 		
 		let url = NSURL(string: newsUrl)
 		let jiDoc = Ji(htmlURL: url!)
-		let bodyNode = jiDoc?.xPath("//div")!.first!
+//		let bodyNode = jiDoc?.xPath("//body")!.first!
 		
-		let h2 = jiDoc?.xPath("//h2")!.first!
-		let hbody = bodyNode!.xPath("/div[@class='headlineTxt']/p[@class='hbody']").first
+		let firstDiv = jiDoc?.xPath("//div")!.first!
+		var hbody = firstDiv!.xPath("//div[@class='headline hasImg']/div[@class='headlineTxt']/p[@class='hbody']").first
+			print("パターン1")
+		
+		if hbody == nil {
+			hbody = firstDiv!.xPath("//div[@class='headline']/div[@class='headlineTxt']/p[@class='hbody']").first
+			print("パターン2")
+			
+		}
+		mytextView.text = hbody!.content!
+		//<div class="headlineTxt">
 //		print(h2)
 //		print(bodyNode)
 		print(hbody)
+//		print(firstDiv)
 	}
 	
 	@IBAction func pushSegmented(sender: UISegmentedControl) {

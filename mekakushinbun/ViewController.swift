@@ -53,7 +53,7 @@ UITableViewDelegate, UIScrollViewDelegate, NSXMLParserDelegate {
 	}
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		print("\(indexPath.row)行目を選択")
+//		print("\(indexPath.row)行目を選択")
 		selectedIndex = indexPath.row
 		performSegueWithIdentifier("detailSegue", sender: nil)
 	}
